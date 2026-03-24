@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-accent-gold: #FFC300;
+  --color-primary-bg: #1a1a1a;
+  --color-secondary-dark: #111111;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .cta-button {
+    @apply bg-accent-gold text-primary-bg font-bold transition-all duration-200 hover:bg-yellow-500 hover:-translate-y-0.5 hover:shadow-[0_4px_10px_rgba(255,195,0,0.4)];
+  }
+  
+  .quote-button {
+    @apply border-2 border-accent-gold text-accent-gold transition-all duration-200 hover:bg-accent-gold hover:text-primary-bg;
+  }
+
+  .image-border-wrap {
+    @apply p-1 rounded-xl bg-linear-to-br from-accent-gold to-primary-bg;
+  }
+}
